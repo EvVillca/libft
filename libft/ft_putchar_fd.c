@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evillca- <evillca-@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-25 08:56:43 by evillca-          #+#    #+#             */
-/*   Updated: 2024/10/02 08:47:06 by evillca-         ###   ########.fr       */
+/*   Created: 2024-10-03 16:22:18 by evillca-          #+#    #+#             */
+/*   Updated: 2024-10-03 16:22:18 by evillca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+/*envía C al descriptor de fichero especificado*/
+void	ft_putchar_fd(char c, int fd)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	write (fd, &c, 1);
 }

@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evillca- <evillca-@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-25 08:56:43 by evillca-          #+#    #+#             */
-/*   Updated: 2024/10/02 08:47:06 by evillca-         ###   ########.fr       */
+/*   Created: 2024-10-03 16:40:33 by evillca-          #+#    #+#             */
+/*   Updated: 2024-10-03 16:40:33 by evillca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+/*string write por fd*/
+void	ft_putstr_fd(char *s, int fd)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	int	i;
+
+	i = 0;
+	while (s[i])
+		ft_putchar_fd (s[i++], fd);
 }
