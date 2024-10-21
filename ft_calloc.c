@@ -13,8 +13,7 @@
 #include "libft.h"
 
 /*
- * Mem dinámica.
- *numElem * size => inicializado a 0
+ *numElem * size => 0
  */
 void	*ft_calloc(size_t nmemb, size_t size)
 {

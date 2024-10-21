@@ -12,7 +12,7 @@
 
 #include "libft.h"
 /*_
- * Borra los n bytes y colaca 0 en su lugar.
+ * n is the number of bytes to be set to zero
  */
 void	ft_bzero(void *s, size_t n)
 {
