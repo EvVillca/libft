@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evillca- <evillca-@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: evillca- <evillca-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-02 10:01:40 by evillca-          #+#    #+#             */
-/*   Updated: 2024-10-02 10:01:40 by evillca-         ###   ########.fr       */
+/*   Created: 2024/10/25 10:44:11 by evillca-          #+#    #+#             */
+/*   Updated: 2024/10/25 10:44:11 by evillca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *duplica string malloc
- */
-char	*ft_strdup(const char *s)
-{
-	char	*mem;
-	int		tam;
+ * Locates the first occurrence
+ * Locate \0
+ * NULL if not found
+*/
 
-	tam = ft_strlen((char *)s);
-	mem = malloc(sizeof(char) * tam + 1);
-	if (mem == NULL)
-		return (NULL);
-	ft_memcpy(mem, s, tam);
-	return (mem);
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == (char) c)
+			return ((char *) s);
+		s++;
+	}
+	if (*s == (char) c)
+		return ((char *) s);
+	return (NULL);
 }

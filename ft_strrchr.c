@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evillca- <evillca-@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: evillca- <evillca-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-02 10:01:40 by evillca-          #+#    #+#             */
-/*   Updated: 2024-10-02 10:01:40 by evillca-         ###   ########.fr       */
+/*   Created: 2024/10/25 11:50:15 by evillca-          #+#    #+#             */
+/*   Updated: 2024/10/25 11:50:15 by evillca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *duplica string malloc
- */
-char	*ft_strdup(const char *s)
+ * Locates the last occurrence
+ * NULL if not found
+ * &s[i] == (char *) s
+*/
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*mem;
-	int		tam;
+	int		i;
+	char	*str;
 
-	tam = ft_strlen((char *)s);
-	mem = malloc(sizeof(char) * tam + 1);
-	if (mem == NULL)
-		return (NULL);
-	ft_memcpy(mem, s, tam);
-	return (mem);
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == (char) c)
+			return (&s[i]);
+		i--;
+	}
+	return (NULL);
 }
