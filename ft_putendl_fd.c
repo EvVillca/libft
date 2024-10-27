@@ -18,3 +18,13 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*s = "Hola Mundo";
+	int		fd = 1;
+
+	ft_putendl_fd(s, fd);
+	return (0);
+}*/

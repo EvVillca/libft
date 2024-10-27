@@ -26,3 +26,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+#include <stdio.h>
+
+int	main()
+{
+	char	s1[20] = "Hola Mundo";
+	char	s2[20] = "Hola Mundo";
+	size_t	n = 10;
+
+	printf("Salida: %d\n", ft_memcmp(s1, s2, n));
+	return (0);
+}

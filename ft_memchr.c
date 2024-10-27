@@ -26,3 +26,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+#include <stdio.h>
+
+int	main()
+{
+	char	s[20] = "Hola Mundo";
+	int		c = 'M';
+	size_t	n = 10;
+
+	printf("Salida: %s\n", ft_memchr(s, c, n));
+	return (0);
+}

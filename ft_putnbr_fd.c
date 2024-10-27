@@ -13,15 +13,12 @@
 #include "libft.h"
 
 /*Write de un número*/
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	char	c;
+	long	n;
 
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
-	}
+	n = nb;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
@@ -33,4 +30,14 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	c = ((n % 10) + '0');
 	ft_putchar_fd(c, fd);
+}
+#include <stdio.h>
+
+int	main()
+{
+	int	n = 2147483647;
+	int	fd = 1;
+
+	ft_putnbr_fd(n, fd);
+	return (0);
 }

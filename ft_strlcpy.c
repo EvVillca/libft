@@ -14,6 +14,7 @@
 
 /*
  * Copy src to dst
+ * size -1 to leave space for the \0
  * \0 terminated
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -34,3 +35,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	dst[20] = "Hola";
+	char	src[20] = " Mundo";
+	size_t	size = 20;
+
+	printf("Salida: %zu\n", ft_strlcpy(dst, src, size));
+	printf("dest: %s\n", dst);
+	return (0);
+}*/

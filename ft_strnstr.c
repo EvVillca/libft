@@ -41,3 +41,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*haystack = "Hola Mundo 42";
+	char	*needle = "Mundo";
+	//size_t	len = 9; // NULL
+	size_t	len = 10; // Mundo
+
+	printf("Salida: %s\n", ft_strnstr(haystack, needle, len));
+	return (0);
+}*/

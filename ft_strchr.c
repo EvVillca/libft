@@ -30,3 +30,13 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) s);
 	return (NULL);
 }
+#include <stdio.h>
+
+int	main()
+{
+	char	*str = "Hola Mundo";
+	int		c = 'o';
+
+	printf("Salida: %s\n", ft_strchr(str, c));
+	return (0);
+}

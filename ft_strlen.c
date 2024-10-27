@@ -24,3 +24,12 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*str = "Hola Mundo";
+
+	printf("Salida: %zu\n", ft_strlen(str));
+	return (0);
+}*/

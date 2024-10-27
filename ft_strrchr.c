@@ -16,6 +16,7 @@
  * Locates the last occurrence
  * NULL if not found
  * &s[i] == (char *) s
+ * return: pointer to the located character
 */
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,3 +32,13 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+#include <stdio.h>
+
+/*int	main()
+{
+	char	*str = "Hola Mundo";
+	int		c = 'd';
+
+	printf("Salida: %s\n", ft_strrchr(str, c));
+	return (0);
+}*/

@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s)
 	mem[tam] = '\0';
 	return (mem);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
@@ -39,4 +39,4 @@ int	main()
 	printf("%s\n", str2);
 	free(str2);
 	return (0);
-}
+}*/
