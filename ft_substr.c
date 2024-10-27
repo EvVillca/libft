@@ -29,3 +29,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+/*#include <stdio.h>
+
+int main()
+{
+	char *fc = ft_substr("Hola42Madrid", 5, 4);
+	printf("%s\n", fc);
+}*/
