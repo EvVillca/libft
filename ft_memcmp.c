@@ -12,7 +12,9 @@
 
 #include "libft.h"
 
-/*Compara*/
+/* 
+ *Compare the first n bytes of the string s1 and s2
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
@@ -26,14 +28,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
 	char	s1[20] = "Hola Mundo";
-	char	s2[20] = "Hola Mundo";
-	size_t	n = 10;
+	char	s2[20] = "Hola Mondo";
+	//size_t	n = 10; // 6
+	size_t	n = 5; 
 
 	printf("Salida: %d\n", ft_memcmp(s1, s2, n));
 	return (0);
-}
+}*/

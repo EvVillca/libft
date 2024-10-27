@@ -12,90 +12,99 @@
 
 #include "libft.h"
 
-/*Contamos el número de PLBs, para el tam del array*/
-static int	count_words(char const *s, char c)
+static int	word_count(const char *s, char c)
 {
 	int	i;
-	int	words;
-	int	lock;
+	int	count;
+	int	flag;
 
 	i = 0;
-	words = 0;
-	lock = 0;
-	while (s[i])
+	count = 0;
+	flag = 0;
+	while (*(s + i))
 	{
-		if (s[i] == c)
+		if (*(s + i) == c)
+			flag = 0;
+		else if (flag == 0)
 		{
-			lock = 0;
+			flag = 1;
+			++count;
 		}
-		else if (lock == 0)
-		{
-			lock++;
-			words++;
-		}
+		++i;
+	}
+	return (count);
+}
+
+static void	free_split(char **res, int k)
+{
+	int	i;
+
+	i = 0;
+	while (i < k)
+	{
+		free(res[i]);
 		i++;
 	}
-	return (words);
 }
 
-/*Devuelve el num de letras de la PLB hasta el delimitador */
-static int	len_word(char const *s, char c)
+static int	fill_split(const char *s, char c, char **res)
 {
-	int	i;
+	int	cont[3];
 
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
-
-/*Libera memoria, de todas hasta donde falló. Con i para no desplar ptr*/
-static void	free_split(char **s, int j)
-{
-	int	i;
-
-	i = 0;
-	while (i < j)
-		free(s[i++]);
-}
-
-/*Crea los arrays con sus tamaños de lo delimitado*/
-static void	aux_split(char const *s, char c, char **strings)
-{
-	int	i;
-	int	k;
-
-	i = 0;
-	while (*s)
+	cont[0] = 0;
+	cont[2] = 0;
+	while (*(s + cont[0]))
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s == '\0')
-			continue ;
-		strings[i] = malloc(sizeof(char) * len_word(s, c) + 1);
-		if (strings[i] == NULL)
-			free_split(strings, i);
-		k = 0;
-		while (*s != c && *s)
+		while (*(s + cont[0]) == c)
+			++cont[0];
+		cont[1] = 0;
+		while (*(s + cont[0] + cont[1]) && *(s + cont[0] + cont[1]) != c)
+			++cont[1];
+		if (cont[1] > 0)
 		{
-			strings[i][k] = *s;
-			k++;
-			s++;
+			res[cont[2]] = ft_substr(s, cont[0], cont[1]);
+			if (res[cont[2]] == NULL)
+			{
+				free_split(res, cont[2]);
+				return (-1);
+			}
+			++cont[2];
 		}
-		strings[i][k] = '\0';
-		i++;
+		cont[0] += cont[1];
 	}
-	strings[i] = NULL;
+	return (0);
 }
 
-/*Devuelve un array de strings, separado por el delimitador*/
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	char	**strings;
+	int		words;
+	char	**res;
 
-	strings = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (strings == NULL)
+	words = word_count(s, c);
+	res = (char **) malloc((words + 1) * sizeof(char *));
+	if (res == NULL)
 		return (NULL);
-	aux_split(s, c, strings);
-	return (strings);
+	res[words] = NULL;
+	if (fill_split(s, c, res) == -1)
+	{
+		free(res);
+		return (NULL);
+	}
+	return (res);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	**res;
+	int		i;
+
+	res = ft_split(" Hola Mundo ", ' ');
+	i = 0;
+	while (res[i])
+	{
+		printf("Salida: %s\n", res[i]);
+		i++;
+	}
+	return (0);
+}*/

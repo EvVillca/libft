@@ -16,3 +16,11 @@ int	ft_isascii(int c)
 {
 	return ((c >= 0) && (c <= 127));
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	c = 128;
+	printf("Salida: %d\n", ft_isascii(c));
+	return (0);
+}*/

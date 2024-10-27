@@ -12,8 +12,15 @@
 
 #include "libft.h"
 
-/*Comprueba que solo se imprimen caracteres imprimibles*/
 int	ft_isprint(int c)
 {
 	return (c > 31 && c < 127);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	c = 32;
+	printf("Salida: %d\n", ft_isprint(c));
+	return (0);
+}*/

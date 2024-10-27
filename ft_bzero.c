@@ -25,3 +25,12 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+#include <stdio.h>
+
+/*int	main()
+{
+	char	str[10] = "123456789";
+	ft_bzero(str, 5);
+	printf("Salida: %s\n", str);
+	return (0);
+}*/

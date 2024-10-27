@@ -12,26 +12,26 @@
 
 #include "libft.h"
 
-/*Write de un número*/
-void	ft_putnbr_fd(int nb, int fd)
+/*Write number*/
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
-	long	n;
+	long	nb;
 
-	n = nb;
+	nb = n;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n *= -1;
+		nb *= -1;
 	}
-	if (n > 9)
+	if (nb > 9)
 	{
-		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(nb / 10, fd);
 	}
-	c = ((n % 10) + '0');
+	c = ((nb % 10) + '0');
 	ft_putchar_fd(c, fd);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
@@ -40,4 +40,4 @@ int	main()
 
 	ft_putnbr_fd(n, fd);
 	return (0);
-}
+}*/

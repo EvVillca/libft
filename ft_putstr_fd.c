@@ -21,3 +21,13 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 		ft_putchar_fd (s[i++], fd);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*s = "Hola Mundo";
+	int		fd = 1;
+
+	ft_putstr_fd(s, fd);
+	return (0);
+}*/

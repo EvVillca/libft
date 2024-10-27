@@ -12,7 +12,9 @@
 
 #include "libft.h"
 
-/*Rellena de n caracteres c en s*/
+/*
+ * Fill the first n bytes to s with byte c
+ */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;

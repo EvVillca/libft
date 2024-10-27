@@ -28,3 +28,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*str = "1234";
+	printf("Salida: %d\n", ft_atoi(str));
+	return (0);
+}*/

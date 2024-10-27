@@ -12,7 +12,12 @@
 
 #include "libft.h"
 
-/*Compara el byte de mem hasta encontrar la 1º ocurrencia en S. Ptr*/
+
+/*
+ *Search for the first occurrence of the character c in the 
+ * first n bytes of the string s
+ */
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
@@ -26,7 +31,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
@@ -36,4 +41,4 @@ int	main()
 
 	printf("Salida: %s\n", ft_memchr(s, c, n));
 	return (0);
-}
+}*/

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/*ft_putstr() + salto de linea*/
+/*ft_putstr() + \n*/
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);

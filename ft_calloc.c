@@ -25,3 +25,20 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero (mem, nmemb * size);
 	return (mem);
 }
+/*#include <stdio.h>
+
+int main()
+{
+	int	*ptr;
+	int	i;
+
+	ptr = ft_calloc(5, sizeof(int));
+	i = 0;
+	while (i < 5)
+	{
+		printf("Salida: %d\n", ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return (0);
+}*/
