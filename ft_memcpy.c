@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/*
+ * copy n bytes from src to dest, overwrite
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
@@ -30,3 +33,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	dest[20] = "Hola Mundo";
+	char	src[20] = "42Madrid";
+	size_t	n = 5;
+
+	printf("Salida: %s\n", ft_memcpy(dest, src, n));
+	printf("dest: %s\n", dest);
+	return (0);
+}*/

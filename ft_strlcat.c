@@ -40,3 +40,15 @@ size_t 	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (dest_len + src_len);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	dest[20] = "Hola";
+	char	src[20] = " Mundo";
+	size_t	size = 20;
+
+	printf("Salida: %zu\n", ft_strlcat(dest, src, size));
+	printf("dest: %s\n", dest);
+	return (0);
+}*/

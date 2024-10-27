@@ -41,3 +41,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i + j] = '\0';
 	return (join);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*str1 = "Hola ";
+	char	*str2 = "42Madrid";
+	char	*str3;
+
+	str3 = ft_strjoin(str1, str2);
+	printf("%s\n", str3);
+	free(str3);
+	return (0);
+}*/

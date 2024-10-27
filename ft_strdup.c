@@ -25,5 +25,18 @@ char	*ft_strdup(const char *s)
 	if (mem == NULL)
 		return (NULL);
 	ft_memcpy(mem, s, tam);
+	mem[tam] = '\0';
 	return (mem);
+}
+#include <stdio.h>
+
+int	main()
+{
+	char	*str = "Hola Mundo";
+	char	*str2;
+
+	str2 = ft_strdup(str);
+	printf("%s\n", str2);
+	free(str2);
+	return (0);
 }
