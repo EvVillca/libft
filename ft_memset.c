@@ -27,7 +27,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main()
 {
@@ -37,4 +37,4 @@ int	main()
 
 	printf("Salida: %s\n", ft_memset(str, c, n));
 	return (0);
-}
+}*/

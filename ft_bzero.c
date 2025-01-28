@@ -25,9 +25,9 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
-/*int	main()
+int	main()
 {
 	char	str[10] = "123456789";
 	ft_bzero(str, 5);

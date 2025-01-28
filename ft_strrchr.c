@@ -21,20 +21,19 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	char	*str;
 
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char) c)
-			return (&s[i]);
+			return ((char *)(s + i));
 		i--;
 	}
 	return (NULL);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 
-/*int	main()
+int	main()
 {
 	char	*str = "Hola Mundo";
 	int		c = 'd';

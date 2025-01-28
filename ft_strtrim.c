@@ -16,12 +16,12 @@
  * first ocurrence
  * last ocurrence
  */
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t start;
-	size_t end;
-	size_t len_end;
-	char *str;
+	size_t	start;
+	size_t	end;
+	size_t	len_end;
+	char	*str;
 
 	if (s1 == 0 || set == 0)
 		return (NULL);
@@ -38,6 +38,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, s1 + start, len_end + 1);
 	return (str);
 }
+
 /*#include <stdio.h>
 int main()
 {

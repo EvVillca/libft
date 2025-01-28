@@ -20,9 +20,9 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	//size_t	len;
+	size_t	len;
 
-	//len = ft_strlen(src);
+	len = ft_strlen(src);
 	i = 0;
 	if (size > 0)
 	{
@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	return (ft_strlen(src));
+	return (len);
 }
 /*#include <stdio.h>
 
